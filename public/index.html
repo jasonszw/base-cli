@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title></title>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.3.0.js"></script>
+	<script>
+		const catalog_api_url = ""; // 二级目录api
+		const bai_du_src = "https://hm.baidu.com/hm.js?1a82f9da886a136dec84a947513bdf3b"; // 百度统计地址
+
+		// 百度统计
+		var _hmt = _hmt || [];
+		(function () {
+			let hm = document.createElement("script");
+			hm.src = bai_du_src;
+			let s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+
+		function getQueryVariable(variable) {
+			let query = window.location.search.substring(1);
+			let vars = query.split("&");
+			for (let i = 0; i < vars.length; i++) {
+				let pair = vars[i].split("=");
+				if (pair[0] == variable) {
+					return pair[1];
+				}
+			}
+			return (false);
+		}
+
+	</script>
+</head>
+<body>
+<noscript>
+	<strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+		Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>

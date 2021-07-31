@@ -1,0 +1,26 @@
+//按钮样式
+@mixin btn-style {
+	width: 100px;
+	text-align: center;
+	background: #723337;
+	font-size: 16PX;
+	font-weight: 600;
+	letter-spacing: 6px;
+	padding: 6px 20px;
+	color: #ffffff;
+}
+
+//遮罩层样式
+@mixin cover-style {
+	width: 100%;
+	min-height: 642px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background: rgba(0,0,0,0.8);
+	//display: flex;
+	//justify-content: center;
+	//align-items: center;
+}
