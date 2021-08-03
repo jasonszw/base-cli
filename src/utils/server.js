@@ -98,5 +98,5 @@ export default {
 	requestPost,
 	requestGet
 }
-// Vue.prototype.requestPost = requestPost;
-// Vue.prototype.requestGet = requestGet;
+Vue.prototype.requestPost = requestPost;
+Vue.prototype.requestGet = requestGet;
