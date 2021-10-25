@@ -6,7 +6,6 @@
 
 <style lang="scss">
 	@import "assets/styles/reset.css";
-	@import "assets/styles/animate.min.css";
 
 	#app {
 		font-family: "SourceHanSansCN-Regular";

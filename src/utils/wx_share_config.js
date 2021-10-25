@@ -17,6 +17,8 @@ const share = ()=>{
 					signature: data.signature,// 必填，签名
 					jsApiList: [
 						'checkJsApi',
+            'updateAppMessageShareData',
+            'updateTimelineShareData',
 						'onMenuShareTimeline',
 						'onMenuShareAppMessage',
 						'onMenuShareQQ',
@@ -40,6 +42,24 @@ const share = ()=>{
 	})
 };
 const wxReady = () =>{
+  wx.updateAppMessageShareData({
+    title: window.shareData.title,
+    desc: window.shareData.desc,
+    link: window.shareData.link,
+    imgUrl: window.shareData.imgUrl,
+    success: function(res) {
+      console.log(res)
+    },
+  })
+  wx.updateTimelineShareData({
+    title: window.shareData.title,
+    desc: window.shareData.desc,
+    link: window.shareData.link,
+    imgUrl: window.shareData.imgUrl,
+    success: function(res) {
+      console.log(res)
+    },
+  })
 	wx.onMenuShareAppMessage({
 		title: window.shareData.title,
 		desc: window.shareData.desc,

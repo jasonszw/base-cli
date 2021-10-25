@@ -1,7 +1,14 @@
 module.exports = {
-	plugins: [
-		require('postcss-px2rem')({
-			remUnit: 37.5
-		})
-	]
+  plugins: {
+    autoprefixer: {},
+    'postcss-pxtorem': {
+      rootValue: 75,
+      unitPrecision: 5,
+      propList: ['*'],
+      selectorBlackList: ['ignore', /^.van-/],
+      replace: true,
+      mediaQuery: false,
+      minPixelValue: 0,
+    },
+  },
 }
