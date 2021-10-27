@@ -4,7 +4,7 @@ module.exports = {
     'postcss-pxtorem': {
       rootValue: 75,
       unitPrecision: 5,
-      propList: ['*'],
+      propList: ['*', '!font-size'],
       selectorBlackList: ['ignore', /^.van-/],
       replace: true,
       mediaQuery: false,
